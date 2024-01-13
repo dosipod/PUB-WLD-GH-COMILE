@@ -36,7 +36,6 @@ jobs:
         echo '  ${env:esp32dev.lib_deps}' >>platformio.ini
         echo '  https://github.com/blazoncek/arduinoFFT.git' >>platformio.ini
         echo '  olikraus/U8g2 @ ^2.28.8' >>platformio.ini
-        echo '  olikraus/U8g2 @ ^2.28.8' >>platformio.ini
         echo '  Wire' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
@@ -52,7 +51,7 @@ jobs:
         cd $GITHUB_WORKSPACE
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-        git add $GITHUB_WORKSPACE/custom_build.bin
+        git add $GITHUB_WORKSPACE/xcustom_build.bin
         git add $GITHUB_WORKSPACE/last_update_date.txt
         git commit -m "Commit Custom Build"
         git push origin main
