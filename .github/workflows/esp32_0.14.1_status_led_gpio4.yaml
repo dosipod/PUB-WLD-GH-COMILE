@@ -1,4 +1,4 @@
-name: esp32_0.14.1_status_led_gpio2
+name: esp32_0.14.1_status_led_gpio4
 on:
     workflow_dispatch:
 
