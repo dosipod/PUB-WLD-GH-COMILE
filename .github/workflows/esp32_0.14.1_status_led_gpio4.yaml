@@ -30,7 +30,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev.build_flags} ${common.debug_flags} -D WLED_DEBUG -D STATUSLED=2' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev.build_flags} ${common.debug_flags} -D WLED_DEBUG -D STATUSLED=4' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
