@@ -1,4 +1,4 @@
-name: WLED_compile_eth_with_muti_relay
+name: WLED_compile_eth_with_muti_relay_8
 
 on:
     workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32_eth' >>platformio.ini
-        echo 'build_flags = ${env:esp32_eth.build_flags} ${common.debug_flags} -D USERMOD_MULTI_RELAY' >>platformio.ini
+        echo 'build_flags = ${env:esp32_eth.build_flags} ${common.debug_flags} -D USERMOD_MULTI_RELAY -D MULTI_RELAY_MAX_RELAYS=8 ' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
