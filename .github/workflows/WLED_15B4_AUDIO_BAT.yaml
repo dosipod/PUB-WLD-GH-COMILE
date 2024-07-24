@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev.build_flags} ${common.debug_flags} ${esp32.AR_build_flags} -D USERMOD_BATTERY' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev.build_flags} ${common.debug_flags} ${esp32.AR_build_flags} ' >>platformio.ini
         echo 'lib_deps = ' >>platformio.ini
         echo '  ${env:esp32dev.lib_deps}' >>platformio.ini
         echo '  ${esp32.AR_lib_deps}' >>platformio.ini
