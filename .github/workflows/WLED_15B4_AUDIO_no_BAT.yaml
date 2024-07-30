@@ -1,4 +1,4 @@
-name: WLED_15B4_AUDIO_BAT
+name: WLED_15B4_AUDIO_no_BAT
 
 on:
     workflow_dispatch:
