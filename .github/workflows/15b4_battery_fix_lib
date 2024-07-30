@@ -1,4 +1,4 @@
-name: 15b4_battery
+name: 15b4_battery_fix_lib
 
 on:
     workflow_dispatch:
