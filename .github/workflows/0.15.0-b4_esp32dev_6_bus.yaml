@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev_audioreactive' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev_audioreactive.build_flags} ${common.debug_flags} -D WLED_MAX_BUSSES=6' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev_audioreactive.build_flags} ${common.debug_flags} -D WLED_MAX_BUSSES=6 -D WLED_MAX_DIGITAL_CHANNELS=3 -D WLED_MAX_ANALOG_CHANNELS=3 ' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
         pio run -e custom_build || pio run -e custom_build
